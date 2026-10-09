@@ -1,0 +1,36 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local secrets and environment settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Generated task data
+/todo_data.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

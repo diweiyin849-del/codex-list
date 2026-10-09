@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="一个简洁、专注的个人待办清单。">
+  <title>拾序 · Todo List</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233e6857'/%3E%3Cpath d='m9 16 5 5 9-10' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="brand"><span class="brand-mark">✓</span><span>拾序 <small>SHIXU</small></span><span class="header-note">给每一天，留一点秩序。</span></header>
+    <main>
+      <div class="eyebrow">YOUR EVERYDAY, SIMPLIFIED</div>
+      <div class="heading"><div><h1>把想做的，<br>变成做完的<span>。</span></h1><p>不必一次完成所有事。从一件小事开始。</p></div><div class="date-card"><span id="month"></span><strong id="day"></strong><span id="weekday"></span></div></div>
+      <section class="workspace" aria-label="待办清单">
+        <div class="list-heading"><div><h2>我的待办 <span id="total" class="badge">0</span></h2><p>理清思绪，然后轻装出发。</p></div><span class="tiny-label">一步一步，就很好</span></div>
+        <form id="add-form"><label class="sr-only" for="task-input">新任务</label><span class="input-plus" aria-hidden="true">＋</span><input id="task-input" placeholder="接下来，想完成什么？" maxlength="200" autocomplete="off" required><button type="submit">添加任务 <span aria-hidden="true">↗</span></button></form>
+        <div class="toolbar"><div class="filters" role="group" aria-label="筛选任务"><button data-filter="all" class="active" aria-pressed="true">全部 <span id="all-count">0</span></button><button data-filter="active" aria-pressed="false">待完成 <span id="active-count">0</span></button><button data-filter="done" aria-pressed="false">已完成 <span id="done-count">0</span></button></div><button id="clear" class="clear">清除已完成</button></div>
+        <ul id="tasks" aria-label="任务列表"></ul>
+        <div id="empty" class="empty"><div class="empty-icon">✓</div><h3>留白，是新的开始</h3><p>添加你的第一件待办，让今天有个小小的方向。</p></div>
+        <footer class="list-footer"><span><i></i> <span id="remaining">0 件任务待完成</span></span><span id="progress-text">慢慢来，也是在前进</span></footer>
+        <div class="progress"><div id="progress-bar"></div></div>
+      </section>
+      <div class="bottom-note"><span class="leaf">✳</span><p>专注于当下的这一件事。<br><span>每一个小小的完成，都值得被看见。</span></p></div>
+    </main>
+    <footer class="page-footer"><span>拾序 · 为日常减一点负担</span><span>任务仅保存在当前浏览器</span></footer>
+  </div>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
