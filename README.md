@@ -16,7 +16,7 @@
 安装 Python 3 后运行：
 
 ```bash
-python todo.py
+python re_todi.py
 ```
 
 按终端提示管理任务。任务数据保存在 `todo_data.json` 中，该文件不会上传到 GitHub。
@@ -26,4 +26,4 @@ python todo.py
 - `index.html`：网页结构
 - `style.css`：页面样式
 - `app.js`：任务管理与本地存储
-- `todo.py`：命令行待办清单
+- `re_todi.py`：命令行待办清单

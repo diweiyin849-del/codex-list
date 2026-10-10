@@ -1,4 +1,4 @@
-"""一个无需第三方依赖的命令行待办清单：python todo.py。"""
+"""一个无需第三方依赖的命令行待办清单：python re_todi.py。"""
 
 import json
 from pathlib import Path
@@ -22,8 +22,9 @@ def save_tasks(tasks):
 def show_tasks(tasks):
     if not tasks:
         print("暂无任务，添加一个吧！")
+        return
     for index, task in enumerate(tasks, start=1):
-        marker = "✓" if task["done"] else " "
+        marker = "已完成" if task["done"] else "未完成"
         print(f"{index}. [{marker}] {task['title']}")
 
 
